@@ -10,8 +10,8 @@ export default (appInfo: EggAppInfo) => {
     host: '127.0.0.1',
     port: 3306,
     username: 'root',
-    password: '123123',
-    database: 'cool',
+    password: 'root',
+    database: 'cool_admin_20210607',
     // 自动建表 注意：线上部署的时候不要使用，有可能导致数据丢失
     synchronize: true,
     // 打印日志
