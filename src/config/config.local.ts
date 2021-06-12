@@ -7,7 +7,7 @@ export default (appInfo: EggAppInfo) => {
 
   config.orm = {
     type: 'mysql',
-    host: '10.211.55.7',
+    host: '127.0.0.1',
     port: 3306,
     username: 'root',
     password: 'root',
