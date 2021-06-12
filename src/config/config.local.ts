@@ -7,7 +7,7 @@ export default (appInfo: EggAppInfo) => {
 
   config.orm = {
     type: 'mysql',
-    host: '127.0.0.1',
+    host: '10.211.55.7',
     port: 3306,
     username: 'root',
     password: 'root',
@@ -16,6 +16,8 @@ export default (appInfo: EggAppInfo) => {
     synchronize: true,
     // 打印日志
     logging: true,
+    // 字符集
+    charset: 'utf8mb4',
   };
 
   config.logger = {
