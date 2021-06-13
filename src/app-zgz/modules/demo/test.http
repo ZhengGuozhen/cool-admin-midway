@@ -1,0 +1,19 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1JlZnJlc2giOmZhbHNlLCJyb2xlSWRzIjpbIjEiXSwidXNlcm5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MSwicGFzc3dvcmRWZXJzaW9uIjozLCJpYXQiOjE2MjM1NjY0MzUsImV4cCI6MTYyMzU3MzYzNX0.N4IrMVTRhiSYoTkhIYyYqwzmHT5Y7Pnijzvsrx5zh48
+
+
+GET http://127.0.0.1:8001/admin/test2?id=1&name=a
+content-type: application/json
+Authorization: {{token}}
+
+###
+
+POST http://127.0.0.1:8001/admin/test?id=1&p=2
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "id": 11,
+    "name": "aa"
+}
+
+
