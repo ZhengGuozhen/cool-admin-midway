@@ -1,26 +1,28 @@
 @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1JlZnJlc2giOmZhbHNlLCJyb2xlSWRzIjpbIjEwIl0sInVzZXJuYW1lIjoiemd6IiwidXNlcklkIjozMCwicGFzc3dvcmRWZXJzaW9uIjoxLCJpYXQiOjE2MjM2NTgxNzMsImV4cCI6MTYyMzY2NTM3M30.UI_ZCehxLXfqj7lY5JoWIqGnCk_RPkgX07ww2EePlAM
 
 
-
-
+###
 GET http://127.0.0.1:8001/admin/test/1?id=1&name=a
 content-type: application/json
 Authorization: {{token}}
-
 ###
 
+# 含有 /open/ 的接口，不需要鉴权
+###
+GET http://127.0.0.1:8001/admin/test/open/1?id=1&name=a
+###
 GET http://127.0.0.1:8001/admin/open/test/1?id=1&name=a
-content-type: application/json
-Authorization: {{token}}
-
+###
+GET http://127.0.0.1:8001/admin/test/1/open/?id=1&name=a
 ###
 
+###
 GET http://127.0.0.1:8001/admin/test/3?id=1&name=a
 content-type: application/json
 Authorization: {{token}}
-
 ###
 
+###
 POST http://127.0.0.1:8001/admin/test/4
 content-type: application/json
 Authorization: {{token}}
@@ -29,5 +31,5 @@ Authorization: {{token}}
     "id": 11,
     "name": "aa"
 }
-
+###
 
