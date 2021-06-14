@@ -13,7 +13,7 @@ import { demoDTO } from '../dto/demo';
 import { DB } from '../../../comm/db';
 
 @Provide()
-@Controller('/admin')
+@Controller('/api')
 export class DemoController {
   /*
    * 参考故障码
