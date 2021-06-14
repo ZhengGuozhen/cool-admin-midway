@@ -7,15 +7,6 @@ content-type: application/json
 Authorization: {{token}}
 ###
 
-# 含有 /open/ 的接口，不需要鉴权
-###
-GET http://127.0.0.1:8001/api/test/open/1?id=1&name=a
-###
-GET http://127.0.0.1:8001/api/open/test/1?id=1&name=a
-###
-GET http://127.0.0.1:8001/api/test/1/open/?id=1&name=a
-###
-
 ###
 GET http://127.0.0.1:8001/api/test/3?id=1&name=a
 content-type: application/json

@@ -12,6 +12,10 @@ import {
 import { demoDTO } from '../dto/demo';
 import { DB } from '../../../comm/db';
 
+// 注意，全局鉴权中间件在这里也会生效
+// '/admin/' 为前缀的接口会先由全局鉴权中间件进行鉴权
+// 含有 /open/ 的接口，全局鉴权中间件不进行鉴权
+
 @Provide()
 @Controller('/api', {
   middleware: ['simpleAuthorityMiddleware', 'debugMiddleware'],
@@ -40,13 +44,6 @@ export class DemoController {
 
   @Get('/test/1')
   async get1(@Query(ALL) p: object) {
-    return this.ok(p);
-  }
-
-  @Get('/test/open/1')
-  @Get('/open/test/1')
-  @Get('/test/1/open/')
-  async get1_(@Query(ALL) p: object) {
     return this.ok(p);
   }
 
