@@ -38,7 +38,7 @@ export class DemoController {
 
   @Get('/test/1')
   async get1(@Query(ALL) p: object) {
-    return this.ok();
+    return this.ok(p);
   }
 
   @Get('/open/test/1')
