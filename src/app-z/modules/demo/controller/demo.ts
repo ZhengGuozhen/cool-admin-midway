@@ -13,7 +13,9 @@ import { demoDTO } from '../dto/demo';
 import { DB } from '../../../comm/db';
 
 @Provide()
-@Controller('/api')
+@Controller('/api', {
+  middleware: ['simpleAuthorityMiddleware', 'debugMiddleware'],
+})
 export class DemoController {
   /*
    * 参考故障码
