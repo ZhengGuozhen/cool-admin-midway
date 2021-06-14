@@ -1,13 +1,27 @@
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1JlZnJlc2giOmZhbHNlLCJyb2xlSWRzIjpbIjEiXSwidXNlcm5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MSwicGFzc3dvcmRWZXJzaW9uIjozLCJpYXQiOjE2MjM1NjY0MzUsImV4cCI6MTYyMzU3MzYzNX0.N4IrMVTRhiSYoTkhIYyYqwzmHT5Y7Pnijzvsrx5zh48
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1JlZnJlc2giOmZhbHNlLCJyb2xlSWRzIjpbIjEwIl0sInVzZXJuYW1lIjoiemd6IiwidXNlcklkIjozMCwicGFzc3dvcmRWZXJzaW9uIjoxLCJpYXQiOjE2MjM2NTgxNzMsImV4cCI6MTYyMzY2NTM3M30.UI_ZCehxLXfqj7lY5JoWIqGnCk_RPkgX07ww2EePlAM
 
 
-GET http://127.0.0.1:8001/admin/test2?id=1&name=a
+
+
+GET http://127.0.0.1:8001/admin/test/1?id=1&name=a
 content-type: application/json
 Authorization: {{token}}
 
 ###
 
-POST http://127.0.0.1:8001/admin/test?id=1&p=2
+GET http://127.0.0.1:8001/admin/open/test/1?id=1&name=a
+content-type: application/json
+Authorization: {{token}}
+
+###
+
+GET http://127.0.0.1:8001/admin/test/3?id=1&name=a
+content-type: application/json
+Authorization: {{token}}
+
+###
+
+POST http://127.0.0.1:8001/admin/test/4
 content-type: application/json
 Authorization: {{token}}
 

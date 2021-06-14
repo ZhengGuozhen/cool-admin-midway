@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import {
   ALL,
   Body,
@@ -13,15 +14,46 @@ import { DB } from '../../../comm/db';
 
 @Provide()
 @Controller('/admin')
-export class HomeController {
-  @Get('/test1')
-  async get1(@Query('id') id: number) {
-    return id;
+export class DemoController {
+  /*
+   * 参考故障码
+   * SUCCESS = 1000,
+   * COMMFAIL = 1001,
+   * VALIDATEFAIL = 1002,
+   * COREFAIL = 1003
+   */
+  ok(data?: any) {
+    return {
+      code: 1000,
+      data,
+      message: 'success',
+    };
+  }
+  fail(code: number, message: string) {
+    return {
+      code,
+      message,
+    };
   }
 
-  @Get('/test2')
+  @Get('/test/1')
+  async get1(@Query(ALL) p: object) {
+    return this.ok();
+  }
+
+  @Get('/open/test/1')
+  async get1_(@Query(ALL) p: object) {
+    return this.ok(p);
+  }
+
+  @Get('/test/2')
+  async get2(@Query('id') id: number) {
+    return this.ok(id);
+  }
+
+  @Get('/test/3')
   @Validate()
-  async get2(@Query(ALL) p: demoDTO) {
+  async get3(@Query(ALL) p: demoDTO) {
     const sql = `
     SELECT 
       *
@@ -30,12 +62,12 @@ export class HomeController {
     LIMIT 10;
     `;
     const r = await DB.query(sql, [100]);
-    return r;
+    return this.ok(r);
   }
 
-  @Post('/test')
+  @Post('/test/4')
   @Validate()
-  async post(@Body(ALL) p: demoDTO) {
-    return p;
+  async test4(@Body(ALL) p: demoDTO) {
+    return this.ok(p);
   }
 }
