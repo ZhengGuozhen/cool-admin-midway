@@ -117,6 +117,8 @@ export class BaseSysLoginService extends BaseService {
       ignoreChars: 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM',
       width,
       height,
+      // @zgz 验证码长度
+      size: 1,
     });
     const result = {
       captchaId: uuid(),
