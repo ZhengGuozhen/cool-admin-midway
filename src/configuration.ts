@@ -5,8 +5,8 @@ import * as orm from '@midwayjs/orm';
 import * as cool from 'midwayjs-cool-core';
 // import * as wxpay from 'midwayjs-cool-wxpay';
 import * as oss from 'midwayjs-cool-oss';
-// import * as redis from 'midwayjs-cool-redis';
-// import * as queue from 'midwayjs-cool-queue';
+import * as redis from 'midwayjs-cool-redis';
+import * as queue from 'midwayjs-cool-queue';
 // import * as alipay from 'midwayjs-cool-alipay';
 // import * as socket from 'midwayjs-cool-socket';
 
@@ -20,9 +20,9 @@ import * as oss from 'midwayjs-cool-oss';
     // oss插件，需要到后台配置之后才有用，默认是本地上传
     oss,
     // 将缓存替换成redis
-    //redis,
+    redis,
     // 队列
-    //queue,
+    queue,
     // 微信支付
     //wxpay,
     // 支付宝支付
