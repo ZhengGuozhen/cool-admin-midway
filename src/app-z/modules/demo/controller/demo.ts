@@ -7,6 +7,7 @@ import {
   Post,
   Provide,
   Query,
+  Redirect,
   Validate,
 } from '@midwayjs/decorator';
 import { demoDTO } from '../dto/demo';
@@ -70,5 +71,12 @@ export class DemoController {
   @Validate()
   async test4(@Body(ALL) p: demoDTO) {
     return this.ok(p);
+  }
+
+  @Get('/test/5')
+  @Redirect('https://www.baidu.com')
+  async redirect() {
+    // TODO
+    return this.ok('');
   }
 }

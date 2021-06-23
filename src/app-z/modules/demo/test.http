@@ -1,4 +1,4 @@
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1JlZnJlc2giOmZhbHNlLCJyb2xlSWRzIjpbIjEwIl0sInVzZXJuYW1lIjoiemd6IiwidXNlcklkIjozMCwicGFzc3dvcmRWZXJzaW9uIjoxLCJpYXQiOjE2MjM2NzExNzcsImV4cCI6MTYyMzY3ODM3N30.W-q4Shxg8Z7WT-6SaXxhYAenl_X86CSdt722C07LeIE
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1JlZnJlc2giOmZhbHNlLCJyb2xlSWRzIjpbIjEiXSwidXNlcm5hbWUiOiJhZG1pbiIsInVzZXJJZCI6MSwicGFzc3dvcmRWZXJzaW9uIjozLCJpYXQiOjE2MjQ0NTgxNjQsImV4cCI6MTYyNDQ2NTM2NH0.jQXzTNK_nAwpYhlTAKvVzkFzZYd0Dnz-7bqgPqaWtBo
 
 
 ###
@@ -28,4 +28,8 @@ Authorization: {{token}}
 POST http://127.0.0.1:8001/app/demo/goods/list
 content-type: application/json
 Authorization: {{token}}
+###
+
+###
+GET http://127.0.0.1:8001/api/test/5
 ###
