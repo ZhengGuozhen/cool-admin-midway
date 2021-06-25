@@ -32,4 +32,6 @@ Authorization: {{token}}
 
 ###
 GET http://127.0.0.1:8001/api/test/5
+content-type: application/json
+Authorization: {{token}}
 ###
